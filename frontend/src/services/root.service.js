@@ -1,7 +1,10 @@
 import axios from 'axios';
 import cookies from 'js-cookie';
+import { API_URL } from '../config/env.config.js';
 
-const API_URL = 'http://localhost:3000/api';
+if (!API_URL) {
+    throw Error("Error al cargar variables de entorno");
+}
 
 const instance = axios.create({
     baseURL: API_URL,
