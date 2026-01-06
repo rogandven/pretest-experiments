@@ -11,6 +11,8 @@ const envFilePath = path.resolve(_dirname, ".env");
 dotenv.config({ path: envFilePath })
 
 //Exportar variables de entorno
+export const DB_HOST =  process.env.DB_HOST || process.env.HOST;
+export const DB_PORT = process.env.DB_PORT || process.env.PORT;
 export const PORT = process.env.PORT;
 export const HOST = process.env.HOST;
 export const DB_USERNAME = process.env.DB_USERNAME;
