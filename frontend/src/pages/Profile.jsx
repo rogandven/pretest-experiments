@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useGetProfile } from "@hooks/profile/useGetProfile.jsx";
 import ProfileCard from "@components/ProfileCard.jsx";
+import { DULoading } from "../components/daisyUI/DULoading";
 
 const Profile = () => {
   const { fetchProfile } = useGetProfile();
@@ -22,7 +23,7 @@ const Profile = () => {
           <ProfileCard user={profileData} />
         </div>
       ) : (
-        <p>Cargando perfil...</p>
+        <DULoading />
       )}
     </div>
   );
