@@ -1,5 +1,7 @@
 import profilePic from "@assets/profilePic.jpg";
 import college from "@assets/college.jpg";
+import { AiFillStar } from 'react-icons/ai';
+import { MdSchool } from 'react-icons/md';
 
 export const DUProfileCard = ({ user }) => {
   return (
@@ -17,10 +19,17 @@ export const DUProfileCard = ({ user }) => {
           <div className="flex-row flex align-middle items-center ">
             <h2 className="text-2xl font-bold">{user.username}</h2>
             <div className="ml-2 mr-2 badge badge-secondary">
-                {String(user.role).toUpperCase()}
+                <div className="flex flex-row align-middle items-center">
+                    <span><AiFillStar className="mr-2"/></span>
+                    <span>{String(user.role).toUpperCase()}</span>
+                </div>
             </div>
             <div class="badge badge-primary">
-                {String(user.email).includes("@ubiobio.cl") ? "DOCENTE UBB" : "ALUMNO UBB"}
+                <div className="flex flex-row align-middle items-center">
+                    <span><MdSchool className="mr-2"/></span>
+                    <span>{String(user.email).includes("@ubiobio.cl") ? "DOCENTE UBB" : "ALUMNO UBB"}</span>
+                </div>
+                
             </div>
           </div>
 

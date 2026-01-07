@@ -1,6 +1,8 @@
 import { DUMailtoButton } from "./DUMailtoButton";
 import { MdSettings } from 'react-icons/md';
 import { MdDeleteForever } from 'react-icons/md';
+import { FaUserAlt } from 'react-icons/fa';
+import { AiFillStar } from 'react-icons/ai';
 
 export const DUUserTable = (users, handleEditUser, handleDeleteUser) => {
     return (
@@ -21,14 +23,22 @@ export const DUUserTable = (users, handleEditUser, handleDeleteUser) => {
                     console.log(user);
                     return ( 
                         <tr key={user.id || ("USUARIO" + index)}>
-                            <td>{user.username}</td>
+                            <td>
+                                <div className="flex flex-row align-middle items-center">
+                                    <span><FaUserAlt className="mr-2"/></span>
+                                    <span>{user.username}</span>
+                                </div>
+                            </td>    
                             <td>
                                 {user.email}
                                 {DUMailtoButton(user.email, "ml-2")}
                             </td>
                             <td>
                                 <div class="badge badge-secondary">
-                                    {String(user.role).toUpperCase()}
+                                    <div className="flex flex-row align-middle items-center">
+                                        <span><AiFillStar className="mr-2"/></span>
+                                        <span>{String(user.role).toUpperCase()}</span>
+                                    </div>
                                 </div>
                             </td>
                             <td>
