@@ -36,3 +36,13 @@ export async function getProfile() {
         throw error;
     }
 }
+
+export async function getStats() {
+    try {
+        const response = await axios.get("/users/getUserStats");
+        return response.data;
+    } catch (error) {
+        console.error("Error al obtener estadísticas: ", error);
+        throw error;
+    }
+}
