@@ -113,3 +113,25 @@ export async function getProfile(req, res) {
     res.status(500).json({ message: "Error interno del servidor"})
   }
 }
+
+export async function getUserStats(req, res) {
+  try {
+    // Obtener el repositorio de usuarios y buscar un usuario por ID
+    const userRepository = AppDataSource.getRepository(User);
+    const usuariosCreados = await userRepository.count();
+    const usuarios = await userRepository.count({where: {role: "usuario"}});
+    const admninistradores = await userRepository.count({where: {role: "administrador"}});
+    res.status(200).json({ 
+      usuariosCreados: Number(usuariosCreados || 0),
+      usuarios: Number(usuarios || 0),
+      admninistradores: Number(admninistradores || 0),
+    });
+  } catch (error) {
+    console.error("Error en user.controller.js -> getUserStats(): ", error);
+    res.status(200).json({ 
+      usuariosCreados: 0,
+      usuarios: 0,
+      admninistradores: 0,
+    });
+  }
+}

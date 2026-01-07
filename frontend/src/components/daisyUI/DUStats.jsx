@@ -1,4 +1,6 @@
-export const DUStats = () => {
+import profilePic from "@assets/profilePic.jpg";
+
+export const DUStats = (stats) => {
     return (
         <div className="stats">
             <div className="stat">
@@ -47,7 +49,7 @@ export const DUStats = () => {
                 <div className="stat-figure text-secondary">
                     <div className="avatar avatar-online">
                         <div className="w-16 rounded-full">
-                            <img src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp" />
+                            <img src={profilePic} />
                         </div>
                     </div>
                 </div>
