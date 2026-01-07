@@ -3,6 +3,7 @@ import { logout } from "@services/auth.service.js";
 import { FaHome, FaUsers, FaSignOutAlt } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { DUSidebarItem } from "./DUSidebarItem";
+import { DUSidebarButton } from "./DUSidebarButton";
 
 export const DUSidebar = ({PageContent, SidebarTitle}) => {
     const navigate = useNavigate();
@@ -46,7 +47,7 @@ export const DUSidebar = ({PageContent, SidebarTitle}) => {
                     {DUSidebarItem((FaHome), "Inicio", "/home")}
                     {DUSidebarItem((FaUsers), "Usuarios", "/users")}
                     {DUSidebarItem((CgProfile), "Perfil", "/profile")}
-                    {DUSidebarItem((FaSignOutAlt), "Cerrar Sesión", "/login", logoutSubmit, "bg-color-red")}
+                    {DUSidebarItem((FaSignOutAlt), "Cerrar Sesión", "/login", logoutSubmit)}
                 </ul>
                 </div>
             </div>
