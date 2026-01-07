@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import "@styles/loginRegisterForm.css";
 
 const LoginRegisterForm = ({ mode = "login", onSubmit, loginError}) => {
   const {

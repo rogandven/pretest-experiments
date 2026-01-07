@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useGetProfile } from "@hooks/profile/useGetProfile.jsx";
 import ProfileCard from "@components/ProfileCard.jsx";
-import "@styles/profile.css";
 
 const Profile = () => {
   const { fetchProfile } = useGetProfile();

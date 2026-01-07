@@ -1,5 +1,4 @@
 import { FaHome } from "react-icons/fa";
-import "@styles/home.css";
 
 const Home = () => {
   return (
