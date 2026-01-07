@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-// import "@styles/root.css";
 import { AuthProvider } from "@context/AuthContext";
 import { DUSidebar } from "../components/daisyUI/DUSidebar.jsx";
 import DUGenericCard from "../components/daisyUI/DUGenericCard.jsx";

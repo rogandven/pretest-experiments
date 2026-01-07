@@ -6,17 +6,13 @@ import { isAdmin } from "../middleware/authorization.middleware.js";
 
 const router = Router();
 
-// Middleware para autenticar el JWT
 router.use(authenticateJwt);
 
-// Rutas públicas
 router.get("/profile", getProfile);
 router.get("/getUserStats", getUserStats);
 
-// Middleware para verificar si el usuario es administrador
 router.use(isAdmin);
 
-// Rutas para obtener usuarios
 router.get("/", getUsers);
 router.get("/:id", getUserById);
 router.put("/:id", updateUserById);

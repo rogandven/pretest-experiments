@@ -1,7 +1,6 @@
 "use strict";
 import Joi from "joi";
 
-// Función para validar que el correo electrónico termine en @gmail.com o @gmail.cl
 const domainEmailValidator = (value, helpers) => {
   if (!value.endsWith("@gmail.com") && !value.endsWith("@gmail.cl")) {
     return helpers.message(
@@ -11,7 +10,6 @@ const domainEmailValidator = (value, helpers) => {
   return value;
 };
 
-// Esquema de validación para el registro de usuarios
 export const registerValidation = Joi.object({
   username: Joi.string()
     .min(3)
@@ -65,7 +63,6 @@ export const registerValidation = Joi.object({
     "object.unknown": "No se permiten campos adicionales",
   });
 
-// Esquema de validación para el inicio de sesión
 export const loginValidation = Joi.object({
   email: Joi.string()
     .email()
