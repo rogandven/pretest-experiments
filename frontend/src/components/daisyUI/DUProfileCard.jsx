@@ -15,7 +15,7 @@ export const DUProfileCard = ({ user }) => {
                 {String(user.role).toUpperCase()}
             </div>
             <div class="badge badge-primary">
-                {String(user.email).includes("@alumnos.ubiobio.cl") ? "ALUMNO UBB" : "DOCENTE UBB"}
+                {String(user.email).includes("@ubiobio.cl") ? "DOCENTE UBB" : "ALUMNO UBB"}
             </div>
           </div>
 
