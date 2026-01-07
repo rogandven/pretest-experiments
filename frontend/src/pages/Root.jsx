@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 // import "@styles/root.css";
 import { AuthProvider } from "@context/AuthContext";
-import Sidebar from "../components/Sidebar";
 import { DUSidebar } from "../components/daisyUI/DUSidebar.jsx";
 
 function Root() {
@@ -15,7 +14,7 @@ function Root() {
 function PageRoot() {
   const pageContent = () => {
     return (
-      <div className="page-content">
+      <div className="page-content h-screen">
         <Outlet />
       </div>
     )
@@ -23,8 +22,7 @@ function PageRoot() {
 
   return (
     <div className="page-root">
-      <DUSidebar PageContent={pageContent}></DUSidebar>
-      <Sidebar />
+      <DUSidebar PageContent={pageContent} SidebarTitle={"Mario"}></DUSidebar>
     </div>
   );
 }
