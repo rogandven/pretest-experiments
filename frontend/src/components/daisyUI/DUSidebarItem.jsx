@@ -7,8 +7,10 @@ export const DUSidebarItem = (icon, label, destination, logoutSubmit = null, cla
             <li className="mb-1">
             <NavLink to={destination} onClick={logoutSubmit}>
             <button className={`is-drawer-close:tooltip is-drawer-close:tooltip-right ${className}`} data-tip={String(label)}>
-                {icon()}
-                <span className="is-drawer-close:hidden ml-3">{String(label)}</span>
+                <div className="content-center-safe items-center-safe place-self-center align-middle flex flex-row">
+                    {icon()}
+                    <span className="is-drawer-close:hidden ml-1">{String(label)}</span>
+                </div>
             </button>
             </NavLink>
             </li>

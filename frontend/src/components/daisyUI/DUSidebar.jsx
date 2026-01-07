@@ -3,7 +3,6 @@ import { logout } from "@services/auth.service.js";
 import { FaHome, FaUsers, FaSignOutAlt } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { DUSidebarItem } from "./DUSidebarItem";
-import { DUSidebarButton } from "./DUSidebarButton";
 
 export const DUSidebar = ({PageContent, SidebarTitle}) => {
     const navigate = useNavigate();
