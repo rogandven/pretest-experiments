@@ -22,7 +22,7 @@ function PageRoot() {
 
   return (
     <div className="page-root">
-      <DUSidebar PageContent={pageContent} SidebarTitle={"Mario"}></DUSidebar>
+      <DUSidebar PageContent={pageContent} SidebarTitle={"Sistema de Gestión"}></DUSidebar>
     </div>
   );
 }
