@@ -9,7 +9,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // Función que maneja el envío del formulario de inicio de sesión
   const loginSubmit = async () => {
     try {
       const response = await loginService({email: String(email), password: String(password)});
