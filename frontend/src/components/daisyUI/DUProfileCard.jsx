@@ -11,8 +11,11 @@ export const DUProfileCard = ({ user }) => {
 
           <div className="flex-row flex align-middle items-center ">
             <h2 className="text-2xl font-bold">{user.username}</h2>
-            <div class="ml-2 badge badge-secondary">
+            <div class="ml-2 mr-2 badge badge-secondary">
                 {String(user.role).toUpperCase()}
+            </div>
+            <div class="badge badge-primary">
+                {String(user.email).includes("@alumnos.ubiobio.cl") ? "ALUMNO UBB" : "DOCENTE UBB"}
             </div>
           </div>
 
