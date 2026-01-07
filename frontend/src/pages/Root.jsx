@@ -16,7 +16,7 @@ function PageRoot() {
   const pageContent = () => {
     return (
       <div className="page-content h-screen">
-        {DUGenericCard(<Outlet></Outlet>)}
+        {DUGenericCard(<Outlet></Outlet>, "")}
       </div>
     )
   }
