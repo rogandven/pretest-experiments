@@ -1,10 +1,10 @@
 import { FaHome } from "react-icons/fa";
+import { DUStats } from "../components/daisyUI/DUStats";
 
 const Home = () => {
   return (
     <div className="home-banner">
-      <h1>Home</h1>
-      <FaHome className="icon" />
+    <DUStats></DUStats>
     </div>
   );
 };
