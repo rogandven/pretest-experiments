@@ -46,7 +46,7 @@ export const DUSidebar = ({PageContent, SidebarTitle}) => {
                     {DUSidebarItem((FaHome), "Inicio", "/home")}
                     {DUSidebarItem((FaUsers), "Usuarios", "/users")}
                     {DUSidebarItem((CgProfile), "Perfil", "/profile")}
-                    {DUSidebarItem((FaSignOutAlt), "Cerrar Sesión", "/login", logoutSubmit)}
+                    {DUSidebarItem((FaSignOutAlt), "Cerrar Sesión", "/login", logoutSubmit, "bg-color-red")}
                 </ul>
                 </div>
             </div>
