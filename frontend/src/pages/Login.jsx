@@ -1,20 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import LoginRegisterForm from "@components/LoginRegisterForm";
 import { loginService } from "@services/auth.service.js";
+import { DULoginCard } from "../components/daisyUI/DULoginCard.jsx";
 
 const Login = () => {
   const navigate = useNavigate();
   const [loginError, setLoginError] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   // Función que maneja el envío del formulario de inicio de sesión
-  const loginSubmit = async (data) => {
+  const loginSubmit = async () => {
     try {
-      const response = await loginService(data);
+      const response = await loginService({email: String(email), password: String(password)});
       if (response.request.status === 200) {
         navigate("/home");
       } else {
-        setLoginError("Usuario o contraseña incorrectos");
+        setLoginError("Usuario o clave incorrectos");
       }
     } catch (error) {
       console.error(error);
@@ -23,8 +25,8 @@ const Login = () => {
 
   return (
     <main className="page-root">
-      <div className="login-register-container">
-        <LoginRegisterForm mode="login" onSubmit={loginSubmit} loginError={loginError} />
+      <div className="login-register-container items-center justify-items-center align-middle">
+        <DULoginCard onSubmit={loginSubmit} loginError={loginError} setLoginError={setLoginError} className={"items-center"} email={email} password={password} setPassword={setPassword} setEmail={setEmail}></DULoginCard>
       </div>
     </main>
   );
