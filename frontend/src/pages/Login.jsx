@@ -25,7 +25,7 @@ const Login = () => {
 
   return (
     <main className="page-root">
-      <div className="login-register-container items-center justify-items-center align-middle">
+      <div className="grid h-screen place-items-center">
         <DULoginCard onSubmit={loginSubmit} loginError={loginError} setLoginError={setLoginError} className={"items-center"} email={email} password={password} setPassword={setPassword} setEmail={setEmail}></DULoginCard>
       </div>
     </main>
